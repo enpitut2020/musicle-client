@@ -1,10 +1,11 @@
 {
   "name": "musicle-client",
   "version": "1.0.0",
-  "license": "no",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "react": "^16.13.1",
