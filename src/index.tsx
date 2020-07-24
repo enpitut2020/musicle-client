@@ -1,28 +1,37 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { fake } from "./fake"
-import { AppBar, Toolbar, Typography } from "@material-ui/core"
+import { AppBar, Toolbar, Typography, Box } from "@material-ui/core"
+import {
+  HashRouter,
+  Switch,
+  Route,
+  Link,
+  BrowserRouter,
+} from "react-router-dom"
 import "./index.css"
-
-// https://musicle-server.herokuapp.com/
+import { Login } from "./pages/Login"
+import { Home } from "./pages/Home"
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6">Musicle</Typography>
+          <Typography variant="h6" component={Link as any} as="h1" to="/">
+            Musicle
+          </Typography>
         </Toolbar>
       </AppBar>
-      <h2>あなたがSpotifyでよく聴く曲ランキング</h2>
-      <ol>
-        {fake.map((item) => (
-          <li>
-            {item.song_name} - {item.artist_name}
-          </li>
-        ))}
-      </ol>
-    </>
+      <Box mt={2} />
+      <Switch>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   )
 }
 
