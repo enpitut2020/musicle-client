@@ -3,12 +3,12 @@ import { Button } from "@material-ui/core"
 
 export const Login = () => {
   const redirectUri = encodeURIComponent(
-    `http://localhost:8080/spotify-callback`
+    `${window.location.origin}/spotify-callback`
   )
   const scope = encodeURIComponent(
     "user-top-read user-read-private user-read-email"
   )
-  const clientId = "ef635fbff37e468db46dee87459d7537"
+  const clientId = "4ff85ab0e8334991bbfdbb920765ec70"
 
   return (
     <>
