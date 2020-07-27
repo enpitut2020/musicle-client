@@ -1,10 +1,10 @@
 import React from "react"
 import { Button } from "@material-ui/core"
 
+const host = true ? "http://localhost:3000" : "https://musicle-app.web.app"
+
 export const Login = () => {
-  const redirectUri = encodeURIComponent(
-    `${window.location.origin}/spotify-callback`
-  )
+  const redirectUri = encodeURIComponent(`${host}/spotify-callback`)
   const scope = encodeURIComponent(
     "user-top-read user-read-private user-read-email"
   )

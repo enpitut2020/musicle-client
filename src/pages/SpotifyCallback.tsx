@@ -6,7 +6,9 @@ const useQuery = () => {
   return new URLSearchParams(useLocation().search)
 }
 
-const host = "http://localhost:3000"
+const host = true
+  ? "http://localhost:3000"
+  : "https://musicle-server.herokuapp.com"
 
 export const SpotifyCallback = () => {
   const query = useQuery()
