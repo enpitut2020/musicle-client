@@ -3,7 +3,6 @@ import ReactDOM from "react-dom"
 import { AppBar, Toolbar, Typography, Box } from "@material-ui/core"
 import { Switch, Route, Link, BrowserRouter } from "react-router-dom"
 import "./index.css"
-import { Login } from "./pages/Login"
 import { Home } from "./pages/Home"
 import { SpotifyCallback } from "./pages/SpotifyCallback"
 import { User } from "./pages/User"
@@ -20,9 +19,6 @@ const App = () => {
       </AppBar>
       <Box mt={2} />
       <Switch>
-        <Route path="/login">
-          <Login />
-        </Route>
         <Route path="/spotify-callback">
           <SpotifyCallback />
         </Route>
