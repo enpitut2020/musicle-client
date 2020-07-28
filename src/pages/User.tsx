@@ -41,7 +41,7 @@ export const User = () => {
   const shareText = `${user.name} さんがよく聴いている曲\n${user.topSongs
     .slice(0, 3)
     .map((song, idx) => `${idx + 1}. ${song.name}\n`)
-    .join("")}${window.location.href}`
+    .join("")}#Musicle\n${window.location.href}`
 
   return (
     <Container>
