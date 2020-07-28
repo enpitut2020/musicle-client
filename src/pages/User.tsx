@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { fake } from "../fake"
-import { useParams, useLocation } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import {
   Typography,
   Container,
@@ -9,6 +8,8 @@ import {
   Button,
 } from "@material-ui/core"
 import { Twitter } from "@material-ui/icons"
+import axios from "axios"
+import { hostServer } from "./const"
 
 type Song = {
   name: string
@@ -22,12 +23,15 @@ type User = {
 
 export const User = () => {
   const { userId } = useParams()
-  const location = useLocation()
   const [user, setUser] = useState<User | null>(null)
 
   useEffect(() => {
     // TODO: api
-    setUser(fake)
+    const load = async () => {
+      const resp = await axios.get(`${hostServer}/users/${userId}`)
+      setUser(resp.data)
+    }
+    load()
   }, [userId])
 
   if (!user) {
