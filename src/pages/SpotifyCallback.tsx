@@ -1,23 +1,25 @@
 import React, { useEffect } from "react"
 import axios from "axios"
-import { useLocation } from "react-router-dom"
+import { useLocation, useHistory } from "react-router-dom"
+import { hostClient, hostServer } from "./const"
 
 const useQuery = () => {
   return new URLSearchParams(useLocation().search)
 }
 
-const host = true
-  ? "http://localhost:3000"
-  : "https://musicle-server.herokuapp.com"
-
 export const SpotifyCallback = () => {
   const query = useQuery()
   const code = query.get("code")
 
+  const history = useHistory()
+
   useEffect(() => {
     const load = async () => {
-      const resp = await axios.get(`${host}/spotify-auth?code=${code}`)
-      console.log(resp.data)
+      const resp = await axios.get(
+        `${hostServer}/spotify-auth?code=${code}&redirect_uri=${hostClient}/spotify-callback`
+      )
+
+      history.push(`/users/${resp.data.uid}`)
     }
 
     load()
