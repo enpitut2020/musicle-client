@@ -6,3 +6,114 @@ a {
   color: unset;
   text-decoration: none;
 }
+
+.back {
+  background-color: #fce6fb;
+  width:100%;
+  height:300px; 
+}
+
+.font1 {
+  font-size: 2.2em;
+  font-weight: 600;
+  margin: 20px 20px 0px 40px;
+}
+
+.font1_2 {
+  font-size: 2.2em;
+  font-weight: 600;
+  margin: 30px 0px 0px 0px;
+}
+
+.font2 {
+  font-size: 2.2em;
+  font-weight: 600;
+  margin: 0px 20px 30px 240px;
+}
+
+.font3 {
+  width:340px; 
+  word-break: normal;
+  font-size: 0.6em;
+  font-weight: 600;
+  margin: 0px 20px 30px 40px;
+}
+
+.font4 {
+  width:320px; 
+  word-break: normal;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.font4_2 {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 20px 0px 20px 0px;
+}
+
+.font4_3 {
+  font-size: 0.8em;
+  font-weight: 600;
+  margin: 0px 0px 15px 0px;
+}
+
+.font5 {
+  width:440px; 
+  word-break: normal;
+  font-size: 0.6em;
+}
+
+.sample-box{
+  width:600px;
+  height:180px;
+  background:#FFF;
+  border:1px solid #fcaefb;
+ }
+
+ .btn-gradient-radius {
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  background-image: linear-gradient(45deg, #fcaefb 0%, #ff69b4 100%);
+  transition: .4s;
+}
+
+.btn-gradient-radius:hover {
+  background-image: linear-gradient(45deg, #fcaefb 0%, #ff69b4 100%);
+}
+
+
+.box {
+  margin         : auto;                 /* サンプル用 中央寄せ */
+  box-sizing     : border-box;           /* 罫線も含む長さ      */
+  width          : 600px;                /* BOXの幅             */
+  height         : 190px;                /* BOXの高さ           */
+  background     : #FFF;              /* BOXの背景色         */
+  border         : 3px solid #fcaefb;    /* 枠線の指定          */
+ 
+  display        : flex;                 /* flex属性に変更      */
+  flex-direction: column;
+  justify-content: space-evenly;              /* 子要素の横位置      */
+  align-items    : center;               /* 子要素の縦位置      */
+}
+.box div {
+  text-align     : center;               /* 文字開始位置合わせ  */
+}
+
+.auto {
+  margin         : auto;                 /* サンプル用 中央寄せ */
+  display        : flex;                 /* flex属性に変更      */
+  flex-direction: column;
+  justify-content: space-evenly;              /* 子要素の横位置      */
+  align-items    : center;               /* 子要素の縦位置      */
+}
+
+.auto2{
+  margin         : auto;  
+  display        : flex;                 /* flex属性に変更      */
+  flex-direction: column;
+  justify-content: center;             /* 子要素の横位置      */
+  align-items    : center;         /* 子要素の縦位置      */
+}
