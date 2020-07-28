@@ -1,12 +1,12 @@
 {
   "hosting": {
     "public": "dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
+      {
+        "source": "/users/**",
+        "function": "addOgTagsInPost"
+      },
       {
         "source": "**",
         "destination": "/index.html"
