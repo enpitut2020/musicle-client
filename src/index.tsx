@@ -9,6 +9,7 @@ import { User } from "./pages/User"
 
 const App = () => {
   return (
+    <div className="back">
     <BrowserRouter>
       <AppBar position="static" style={{ backgroundColor: "#ff69b4" }}>
         <Toolbar>
@@ -30,6 +31,7 @@ const App = () => {
         </Route>
       </Switch>
     </BrowserRouter>
+    </div>
   )
 }
 
