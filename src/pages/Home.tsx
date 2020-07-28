@@ -4,9 +4,7 @@ import { hostClient } from "./const"
 
 export const Home = () => {
   const redirectUri = encodeURIComponent(`${hostClient}/spotify-callback`)
-  const scope = encodeURIComponent(
-    "user-top-read user-read-private user-read-email"
-  )
+  const scope = encodeURIComponent("user-top-read")
   const clientId = "4ff85ab0e8334991bbfdbb920765ec70"
 
   return (
