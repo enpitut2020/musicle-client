@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react"
 import { fake } from "../fake"
-import { useParams } from "react-router-dom"
-import { Typography, Container, Card, CardContent } from "@material-ui/core"
+import { useParams, useLocation } from "react-router-dom"
+import {
+  Typography,
+  Container,
+  Card,
+  CardContent,
+  Button,
+} from "@material-ui/core"
+import { Twitter } from "@material-ui/icons"
 
 type Song = {
   name: string
@@ -15,6 +22,7 @@ type User = {
 
 export const User = () => {
   const { userId } = useParams()
+  const location = useLocation()
   const [user, setUser] = useState<User | null>(null)
 
   useEffect(() => {
@@ -25,6 +33,11 @@ export const User = () => {
   if (!user) {
     return <></>
   }
+
+  const shareText = `${user.name} さんがよく聴いている曲\n${user.topSongs
+    .slice(0, 3)
+    .map((song, idx) => `${idx + 1}. ${song.name}\n`)
+    .join("")}${window.location.href}`
 
   return (
     <Container>
@@ -51,6 +64,27 @@ export const User = () => {
             </Typography>
           </CardContent>
         </Card>
+        <a
+          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+            shareText
+          )}`}
+          target="_blank"
+        >
+          <Button
+            variant="contained"
+            startIcon={<Twitter />}
+            style={{
+              textTransform: "none",
+              backgroundColor: "#1DA1F2",
+              width: "100%",
+              padding: "24px",
+              marginTop: "24px",
+              color: "white",
+            }}
+          >
+            Twitter で共有
+          </Button>
+        </a>
       </div>
     </Container>
   )
