@@ -44,7 +44,7 @@ export const User = () => {
     .join("")}#Musicle\n${window.location.href}`
 
   return (
-    <Container>
+    <Container style={{ marginTop: "12px" }}>
       <Typography variant="h3">{user.name} さんのプロフィール</Typography>
       <div
         style={{
@@ -84,6 +84,7 @@ export const User = () => {
               padding: "24px",
               marginTop: "24px",
               color: "white",
+              marginBottom: "32px",
             }}
           >
             Twitter で共有

@@ -1,5 +1,22 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
+  min-height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 10px;
+  }
 }
 
 a {
@@ -9,111 +26,103 @@ a {
 
 .back {
   background-color: #fce6fb;
-  width:100%;
-  height:300px; 
+  padding: 32px;
 }
 
-.font1 {
-  font-size: 2.2em;
+.MuiTypography-body1.font1 {
+  font-size: 4em;
   font-weight: 600;
-  margin: 20px 20px 0px 40px;
+  margin: 0px 20px 0px 40px;
 }
 
-.font1_2 {
-  font-size: 2.2em;
+.MuiTypography-body1 > .font1_2 {
+  font-size: 3em;
   font-weight: 600;
-  margin: 30px 0px 0px 0px;
+  margin: 60px 0px 0px 0px;
+  text-align: center;
 }
 
-.font2 {
-  font-size: 2.2em;
+.MuiTypography-body1.font2 {
+  font-size: 4em;
   font-weight: 600;
   margin: 0px 20px 30px 240px;
 }
 
-.font3 {
-  width:340px; 
+.MuiTypography-body1.font3 {
   word-break: normal;
-  font-size: 0.6em;
   font-weight: 600;
-  margin: 0px 20px 30px 40px;
+  margin: 30px 20px 30px 40px;
 }
 
-.font4 {
-  width:320px; 
+.MuiTypography-body1.font4 {
   word-break: normal;
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: 600;
+  margin-top: 32px;
+  text-align: center;
 }
 
-.font4_2 {
-  font-size: 1em;
+.MuiTypography-body1 > .font4_2 {
+  font-size: 1.7em;
   font-weight: 600;
   margin: 20px 0px 20px 0px;
 }
 
-.font4_3 {
-  font-size: 0.8em;
+.MuiTypography-body1 > .font4_3 {
+  font-size: 1.2em;
   font-weight: 600;
   margin: 0px 0px 15px 0px;
 }
 
-.font5 {
-  width:440px; 
+.MuiTypography-body1.font5 {
   word-break: normal;
-  font-size: 0.6em;
+  margin-top: 20px;
 }
 
-.sample-box{
-  width:600px;
-  height:180px;
-  background:#FFF;
-  border:1px solid #fcaefb;
- }
+.sample-box {
+  width: 600px;
+  height: 180px;
+  background: #fff;
+  border: 1px solid #fcaefb;
+}
 
- .btn-gradient-radius {
+.btn-gradient-radius {
   display: inline-block;
-  padding: 7px 20px;
-  border-radius: 25px;
+  padding: 14px 40px;
+  border-radius: 50px;
   text-decoration: none;
   background-image: linear-gradient(45deg, #fcaefb 0%, #ff69b4 100%);
-  transition: .4s;
+  transition: 0.4s;
+  font-size: 1.2em;
 }
 
 .btn-gradient-radius:hover {
   background-image: linear-gradient(45deg, #fcaefb 0%, #ff69b4 100%);
 }
 
-
 .box {
-  margin         : auto;                 /* サンプル用 中央寄せ */
-  box-sizing     : border-box;           /* 罫線も含む長さ      */
-  width          : 600px;                /* BOXの幅             */
-  height         : 190px;                /* BOXの高さ           */
-  background     : #FFF;              /* BOXの背景色         */
-  border         : 3px solid #fcaefb;    /* 枠線の指定          */
- 
-  display        : flex;                 /* flex属性に変更      */
+  margin: auto; /* サンプル用 中央寄せ */
+  box-sizing: border-box; /* 罫線も含む長さ      */
+  width: 70vw; /* BOXの幅             */
+  background: #fff; /* BOXの背景色         */
+  border: 3px solid #fcaefb; /* 枠線の指定          */
+  border-radius: 4px;
+
+  display: flex; /* flex属性に変更      */
   flex-direction: column;
-  justify-content: space-evenly;              /* 子要素の横位置      */
-  align-items    : center;               /* 子要素の縦位置      */
+  justify-content: space-evenly; /* 子要素の横位置      */
+  align-items: center; /* 子要素の縦位置      */
+  margin-top: -20px;
+  padding: 32px;
 }
 .box div {
-  text-align     : center;               /* 文字開始位置合わせ  */
+  text-align: center; /* 文字開始位置合わせ  */
 }
 
-.auto {
-  margin         : auto;                 /* サンプル用 中央寄せ */
-  display        : flex;                 /* flex属性に変更      */
+.music-info {
+  display: flex;
+  margin: auto;
   flex-direction: column;
-  justify-content: space-evenly;              /* 子要素の横位置      */
-  align-items    : center;               /* 子要素の縦位置      */
-}
-
-.auto2{
-  margin         : auto;  
-  display        : flex;                 /* flex属性に変更      */
-  flex-direction: column;
-  justify-content: center;             /* 子要素の横位置      */
-  align-items    : center;         /* 子要素の縦位置      */
+  align-items: center;
+  margin-bottom: 20px;
 }
