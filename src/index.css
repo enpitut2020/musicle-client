@@ -27,6 +27,13 @@ a {
 .back {
   background-color: #fce6fb;
   padding: 32px;
+  padding-left: 64px;
+}
+
+@media (max-width: 480px) {
+  .back {
+    padding: 32px 0px;
+  }
 }
 
 .MuiTypography-body1.font1 {
@@ -38,8 +45,14 @@ a {
 .MuiTypography-body1 > .font1_2 {
   font-size: 3em;
   font-weight: 600;
-  margin: 60px 0px 0px 0px;
+  margin: 60px 16px 0px 16px;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .MuiTypography-body1 > .font1_2 {
+    font-size: 2em;
+  }
 }
 
 .MuiTypography-body1.font2 {
@@ -56,27 +69,47 @@ a {
 
 .MuiTypography-body1.font4 {
   word-break: normal;
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: 600;
   margin-top: 32px;
   text-align: center;
 }
 
+@media (max-width: 480px) {
+  .MuiTypography-body1.font4 {
+    font-size: 1.5em;
+  }
+}
+
 .MuiTypography-body1 > .font4_2 {
   font-size: 1.7em;
   font-weight: 600;
-  margin: 20px 0px 20px 0px;
+  margin: 20px;
 }
 
-.MuiTypography-body1 > .font4_3 {
-  font-size: 1.2em;
+@media (max-width: 480px) {
+  .MuiTypography-body1 > .font4_2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 16px 0px 32px 0px;
+  }
+}
+
+.MuiTypography-body1 .font4_3 {
+  font-size: 1.1em;
   font-weight: 600;
-  margin: 0px 0px 15px 0px;
+  margin: 0px 0px 15px 20px;
 }
 
 .MuiTypography-body1.font5 {
   word-break: normal;
   margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .MuiTypography-body1.font5 {
+    font-size: 1.2em;
+  }
 }
 
 .sample-box {
@@ -103,7 +136,7 @@ a {
 .box {
   margin: auto; /* サンプル用 中央寄せ */
   box-sizing: border-box; /* 罫線も含む長さ      */
-  width: 70vw; /* BOXの幅             */
+  width: 60vw; /* BOXの幅             */
   background: #fff; /* BOXの背景色         */
   border: 3px solid #fcaefb; /* 枠線の指定          */
   border-radius: 4px;
@@ -113,8 +146,16 @@ a {
   justify-content: space-evenly; /* 子要素の横位置      */
   align-items: center; /* 子要素の縦位置      */
   margin-top: -20px;
-  padding: 32px;
+  padding: 64px;
 }
+
+@media (max-width: 480px) {
+  .box {
+    width: 90vw;
+    padding: 32px;
+  }
+}
+
 .box div {
   text-align: center; /* 文字開始位置合わせ  */
 }
@@ -125,4 +166,16 @@ a {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+}
+
+.rankings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: "16px 20px";
+  }
 }

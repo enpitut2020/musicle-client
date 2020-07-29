@@ -28,24 +28,33 @@ export const provideOgImage = functions.https.onRequest(async (req, res) => {
     .join("")
     .trim()}`
 
-  const bgColor = "#FF69B4"
-
-  const img = text2png(txt, {
+  const textBuf = text2png(txt, {
     color: "white",
-    backgroundColor: bgColor,
-    padding: 20,
+    paddingTop: 64,
+    paddingBottom: 20,
+    paddingRight: 72,
+    paddingLeft: 72,
     lineSpacing: 10,
     textAlign: "center",
     font: "64px Roboto",
-    localFontPath: path.join(__dirname, "./fonts/Roboto-Medium.ttf"),
+    localFontPath: path.join(__dirname, "./resources/Roboto-Medium.ttf"),
     localFontName: "Roboto",
   })
 
-  const buf = await sharp(img)
-    .resize(1200, 630, {
+  const resizedTextBuf = await sharp(textBuf)
+    .resize(1218, 648, {
       fit: "contain",
-      background: bgColor,
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
     })
+    .png()
+    .toBuffer()
+
+  const buf = await sharp(path.join(__dirname, "./resources/bg.png"))
+    .composite([
+      {
+        input: resizedTextBuf,
+      },
+    ])
     .png()
     .toBuffer()
   res.type("image/png").send(buf)

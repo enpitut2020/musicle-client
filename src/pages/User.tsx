@@ -44,7 +44,7 @@ export const User = () => {
     .join("")}#Musicle\n${window.location.href}`
 
   return (
-    <Container style={{ marginTop: "12px" }}>
+    <Container style={{ padding: "32px" }}>
       <Typography variant="h3">{user.name} さんのプロフィール</Typography>
       <div
         style={{
@@ -55,7 +55,7 @@ export const User = () => {
         <Card>
           <CardContent>
             <Typography variant="h4" style={{ marginTop: "40px" }}>
-              『 あなたがよく聴いている曲 』
+              『 {user.name} さんがよく聴いている曲 』
             </Typography>
             <Typography variant="h5" style={{ marginTop: "32px" }}>
               <ol>

@@ -1,7 +1,7 @@
 {
   "name": "functions",
   "scripts": {
-    "build": "tsc && cp ../dist/index.html lib/ && cp -r ./fonts ./lib",
+    "build": "tsc && cp ../dist/index.html lib/ && cp -r ./resources ./lib",
     "serve": "npm run build && firebase emulators:start --only functions",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",

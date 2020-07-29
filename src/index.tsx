@@ -6,12 +6,14 @@ import "./index.css"
 import { Home } from "./pages/Home"
 import { SpotifyCallback } from "./pages/SpotifyCallback"
 import { User } from "./pages/User"
+import icon from "./icon.png"
 
 const App = () => {
   return (
     <BrowserRouter>
       <AppBar position="static" style={{ backgroundColor: "#ff69b4" }}>
         <Toolbar>
+          <img src={icon} width={40} />
           <Typography variant="h4" component={Link as any} as="h1" to="/">
             Musicle
           </Typography>
@@ -32,10 +34,12 @@ const App = () => {
         style={{
           backgroundColor: "#f0f0f0",
           marginTop: "auto",
+          padding: "16px",
         }}
       >
         <Typography>
-          Created by しょうはやと, Jotei, あやねつん, ゆいき
+          Created by しょうはやと, Jotei, あやねつん, ゆいき in enPiT 2020 ×
+          筑波大学
         </Typography>
       </Toolbar>
     </BrowserRouter>
