@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Typography } from "@material-ui/core"
+import { Button, Typography, Card, CardContent } from "@material-ui/core"
 import { hostClient } from "./const"
 
 export const Home = () => {
@@ -18,7 +18,7 @@ export const Home = () => {
         <Typography className="font3">
           Musicleは、あなたの音楽情報を分析して、SNSで共有できるサービスです。
           <br />
-          友達や知り合いと音楽情報を共有して、つながりを深めましょう：)
+          友達や知り合いと音楽情報を共有して、つながりを深めましょう :)
         </Typography>
       </div>
       <div className="box">
@@ -49,16 +49,21 @@ export const Home = () => {
       <div className="music-info">
         <Typography>
           <div className="font1_2">音楽情報とは？</div>
-          <div className="font4_2">『あなたがよく聞いてる曲TOP5』</div>
         </Typography>
-
-        <Typography>
-          <div className="font4_3">1. Night Driver - 三浦春馬</div>
-          <div className="font4_3">2. ぎゅっと - もさを。</div>
-          <div className="font4_3">3. Angel - ちゃんみな</div>
-          <div className="font4_3">4. 夜に駆ける - YOASOBI</div>
-          <div className="font4_3">5. 香水 - 瑛人</div>
-        </Typography>
+        <Card style={{ margin: "16px" }}>
+          <CardContent className="card">
+            <Typography className="rankings">
+              <div className="font4_2">『あなたがよく聞いてる曲TOP5』</div>
+              <div>
+                <div className="font4_3">1. Night Driver - 三浦春馬</div>
+                <div className="font4_3">2. ぎゅっと - もさを。</div>
+                <div className="font4_3">3. Angel - ちゃんみな</div>
+                <div className="font4_3">4. 夜に駆ける - YOASOBI</div>
+                <div className="font4_3">5. 香水 - 瑛人</div>
+              </div>
+            </Typography>
+          </CardContent>
+        </Card>
       </div>
     </>
   )
