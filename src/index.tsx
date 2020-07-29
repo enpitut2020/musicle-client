@@ -9,7 +9,6 @@ import { User } from "./pages/User"
 
 const App = () => {
   return (
-    <div className="back">
     <BrowserRouter>
       <AppBar position="static" style={{ backgroundColor: "#ff69b4" }}>
         <Toolbar>
@@ -18,7 +17,6 @@ const App = () => {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Box mt={2} />
       <Switch>
         <Route path="/spotify-callback">
           <SpotifyCallback />
@@ -30,8 +28,17 @@ const App = () => {
           <Home />
         </Route>
       </Switch>
+      <Toolbar
+        style={{
+          backgroundColor: "#f0f0f0",
+          marginTop: "auto",
+        }}
+      >
+        <Typography>
+          Created by しょうはやと, Jotei, あやねつん, ゆいき
+        </Typography>
+      </Toolbar>
     </BrowserRouter>
-    </div>
   )
 }
 
